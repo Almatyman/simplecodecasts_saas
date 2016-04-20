@@ -1,11 +1,12 @@
-Class ContactMailer <ActionMailer::Base
-  default_to 'baidildayev@yahoo.com'
+
+class ContactMailer < ActionMailer::Base
+  default to: 'your@email_address.com'
 
   def contact_email(name, email, body)
     @name = name
     @email = email
-    @body - body
+    @body = body
 
-    mail(from: email, subject: 'Contact form Message')
+    mail(from: email, subject: 'Contact Form Message')
   end
 end
